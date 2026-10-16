@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talha Saleem</title>
+<meta name="description" content="Talha Saleem, BS Bioinformatics, Quaid-i-Azam University. AI, computer vision, backend, and biomedical engineering projects.">
+<style>
+  :root{
+    --text:#1a1a1a;
+    --muted:#5a5a5a;
+    --link:#1a56db;
+    --link-visited:#5b3fae;
+    --rule:#e3e3e3;
+    --bg:#ffffff;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:15px;
+    line-height:1.55;
+    padding:36px 20px 60px;
+  }
+  a{color:var(--link); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:visited{color:var(--link-visited);}
+  .blue{color:var(--link);}
+  .wrap{max-width:var(--maxw); margin:0 auto;}
+
+  a:focus-visible{outline:2px solid var(--link); outline-offset:2px;}
+
+  /* header block */
+  header{margin-bottom:24px;}
+  .header-top{
+    display:flex; gap:22px; align-items:flex-start; flex-wrap:wrap;
+    margin-bottom:18px;
+  }
+  .avatar{
+    width:112px; height:112px; border-radius:6px;
+    background:#eef1f4; flex-shrink:0;
+    object-fit:cover;
+    border:1px solid var(--rule);
+  }
+  .header-info h1{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:30px; margin:0 0 6px; font-weight:normal;
+  }
+  .header-info .line{font-size:15px; color:var(--muted); margin:2px 0;}
+  .header-info .line a{color:var(--muted);}
+  .header-info .line a:hover{color:var(--link);}
+
+  .contact-links{
+    margin-top:10px; font-size:14.5px;
+    display:flex; flex-wrap:wrap; gap:4px 0;
+  }
+  .contact-links a{margin-right:14px;}
+  .contact-links .pending{
+    margin-right:14px; color:#b7b7b7; font-style:italic;
+  }
+
+  nav.section-nav{
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    padding:10px 0;
+    font-size:14px;
+    display:flex; flex-wrap:wrap; gap:4px 16px;
+  }
+
+  /* sections */
+  section{margin-top:26px;}
+  h2{
+    font-family:Georgia,'Times New Roman',serif;
+    font-weight:normal;
+    font-size:19px;
+    margin:0 0 10px;
+    padding-bottom:5px;
+    border-bottom:1px solid var(--rule);
+  }
+  p{margin:0 0 14px;}
+  ul{margin:0 0 14px; padding-left:20px;}
+  li{margin-bottom:4px;}
+
+  /* news list */
+  .news-list{list-style:none; padding:0; margin:0;}
+  .news-list li{
+    display:grid; grid-template-columns:70px 1fr; gap:14px;
+    margin-bottom:6px; font-size:15px;
+  }
+  .news-list .date{color:var(--muted); font-size:14px;}
+
+  /* experience */
+  .job{margin-bottom:16px;}
+  .job:last-child{margin-bottom:0;}
+  .job-title{font-weight:600; font-size:15.5px;}
+  .job-meta{color:var(--muted); font-size:14px; margin-bottom:6px;}
+  .job ul{margin-bottom:0;}
+  .tools-line{font-size:14px; color:var(--muted); margin:4px 0 8px;}
+  .tools-line strong{color:var(--text);}
+
+  /* projects */
+  .proj-grid{
+    display:grid; grid-template-columns:1fr 1fr;
+    column-gap:32px; row-gap:18px;
+  }
+  @media (max-width:720px){ .proj-grid{grid-template-columns:1fr;} }
+  .proj{margin-bottom:0; padding-bottom:14px; border-bottom:1px solid var(--rule);}
+  .proj-grid > .proj:nth-last-child(-n+2){border-bottom:none;}
+  @media (max-width:720px){
+    .proj-grid > .proj{border-bottom:1px solid var(--rule); padding-bottom:14px;}
+    .proj-grid > .proj:last-child{border-bottom:none;}
+  }
+  .proj:last-child{margin-bottom:0;}
+  .proj-title{font-weight:600; font-size:15.5px;}
+  .proj-year{color:var(--muted); font-weight:normal; font-size:14px;}
+  .proj ul{margin-top:6px; margin-bottom:0;}
+
+  /* skills */
+  .skill-row{margin-bottom:8px; font-size:15px;}
+  .skill-row strong{display:inline-block; min-width:150px;}
+
+  /* education */
+  .edu{margin-bottom:14px;}
+  .edu:last-child{margin-bottom:0;}
+  .edu-title{font-weight:600; font-size:15.5px;}
+  .edu-meta{color:var(--muted); font-size:14px;}
+
+  /* honors */
+  .honors-list{list-style:none; padding:0; margin:0;}
+  .honors-list li{
+    display:grid; grid-template-columns:80px 1fr; gap:10px;
+    margin-bottom:6px; font-size:15px;
+  }
+  .honors-list .yr{color:var(--muted); font-size:14px;}
+
+  footer{
+    margin-top:56px; padding-top:18px; border-top:1px solid var(--rule);
+    font-size:13px; color:var(--muted);
+  }
+
+  @media (max-width:520px){
+    .header-top{flex-direction:column;}
+    .news-list li, .honors-list li{grid-template-columns:1fr;}
+    .news-list .date, .honors-list .yr{margin-bottom:2px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="header-top">
+      <img class="avatar" src="data:image/jpeg;base64,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" alt="Talha Saleem">
+      <div class="header-info">
+        <h1>Talha Saleem</h1>
+        <div class="line">B.S. in Bioinformatics (2022–2026)</div>
+        <div class="line">Quaid-i-Azam University, Islamabad, Pakistan</div>
+        <div class="line">Campus President, AICP, Artificial Intelligence Community of Pakistan</div>
+        <div class="contact-links">
+          <a href="mailto:talhasaleem13613@gmail.com">Email</a>
+          <a href="tel:+923434706946">+92-343-4706946</a>
+          <a href="https://github.com/talhasaleemm" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/talhasaleem1" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="Talha%20CV%20ML%20Engineer%20October%202026.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+        </div>
+      </div>
+    </div>
+    <nav class="section-nav">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#honors">Honors</a>
+      <a href="#languages">Languages</a>
+      <a href="#mentors">Mentors</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm a Bioinformatics graduate and AI Engineer experienced in computer vision, deep learning, and applied machine learning. I've built object detection, medical imaging, synthetic data, and semiconductor defect classification pipelines using CNNs, GNNs, Qwen, and Llama. I'm seeking Master's research opportunities to systematically investigate machine learning problems.</p>
+    <p>I currently work as a Full Stack AI Engineer at AICyro, Islamabad. Before that I was an AI Engineer at Upendi.ai (Seoul, remote) and an Associate Software Engineer at Zeppelin Labs, Islamabad. I hold a B.S. in Bioinformatics from Quaid-i-Azam University, Islamabad. See <a href="#projects">Projects</a> and <a href="#skills">Skills</a> below for details.</p>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news-list">
+      <li><span class="date">2026</span><span>Graduated with a B.S. in Bioinformatics from <strong>Quaid-i-Azam University</strong>.</span></li>
+      <li><span class="date">2026</span><span>Joined <strong>AICyro</strong>, Islamabad, as Full Stack AI Engineer.</span></li>
+      <li><span class="date">2026</span><span>Started working as AI Engineer at <strong>Upendi.ai</strong>, South Korea (remote).</span></li>
+      <li><span class="date">2025</span><span>Started working as Associate Software Engineer at <strong>Zeppelin Labs</strong>, Islamabad.</span></li>
+      <li><span class="date">2025</span><span>Elected Campus President, <strong>AICP</strong> (Artificial Intelligence Community of Pakistan).</span></li>
+      <li><span class="date">2025</span><span>Co-Lead, <strong>MSLA</strong> (Microsoft Student Learning Ambassadors).</span></li>
+      <li><span class="date">2023</span><span>Campus Ambassador, <strong>GDSC</strong> (Google Developer Student Clubs).</span></li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="edu">
+      <div class="edu-title">B.S. in Bioinformatics</div>
+      <div class="edu-meta">Quaid-i-Azam University, Islamabad, Pakistan, 2022–2026, CGPA 3.0/4.0</div>
+    </div>
+    <div class="edu">
+      <div class="edu-title">Pre-Medical (F.Sc.)</div>
+      <div class="edu-meta">Govt. Rizvia Islamia Degree College, Haroonabad, 2021, 92%</div>
+    </div>
+    <div class="edu">
+      <div class="edu-title">Matriculation (Biology / Mathematics)</div>
+      <div class="edu-meta">Govt. Model High School, Haroonabad, 2019, 95%</div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Work Experience</h2>
+
+    <div class="job">
+      <div class="job-title">Full Stack AI Engineer</div>
+      <div class="job-meta">AICyro, Islamabad, Pakistan, Onsite &middot; Sep 2026 &ndash; Present</div>
+      <div class="tools-line"><strong>Tools:</strong> Python, PyTorch, TensorFlow, OpenAI Vision API</div>
+      <ul>
+        <li>Worked on the OpenAI Vision API to implement real-time image detection in the chatbot.</li>
+        <li>Engineered a multimodal visual triage pipeline and fine-tuned their chatbot to avoid hallucinating.</li>
+        <li>Researched network fingerprinting and built backend pipelines for VPN detection.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title">AI Engineer</div>
+      <div class="job-meta">Upendi.ai, South Korea, Remote &middot; Jan 2026 &ndash; May 2026</div>
+      <div class="tools-line"><strong>Tools:</strong> Ollama, faster-whisper, spaCy, BioBERT, Sentence Transformers, FAISS</div>
+      <ul>
+        <li>Trained and deployed open-weight LLMs (Qwen3-1.7B, Llama 3.2-1B) via Ollama for NLP tasks.</li>
+        <li>Built speech-to-text and diarization pipelines using faster-whisper and SpeechBrain.</li>
+        <li>Fine-tuned BioBERT, built ranking pipelines (spaCy, BM25) and FAISS retrieval, F1-evaluated.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-title">Associate Software Engineer</div>
+      <div class="job-meta">Zeppelin Labs (SMC-Pvt), Islamabad, Pakistan &middot; Sep 2025 &ndash; Dec 2025</div>
+      <div class="tools-line"><strong>Tools:</strong> FastAPI, SQLAlchemy, Docker, React, TypeScript, WebSockets</div>
+      <ul>
+        <li>Developed REST/WebSocket APIs with JWT auth, refresh tokens, and rate-limited endpoints.</li>
+        <li>Modeled databases with SQLAlchemy ORM and containerized services using Docker and Nginx.</li>
+        <li>Built React/TypeScript frontends with an AudioWorklet module, validated via Vitest and pytest.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Notable &amp; Recent Projects</h2>
+
+    <div class="proj-grid">
+
+    <div class="proj">
+      <div class="proj-title">SemiEmapAI: Semiconductor Wafer E-Map Defect and Sensor Analytics Platform (2026)</div>
+      <div class="tools-line"><strong>Tools:</strong> PyTorch, PyTorch Geometric, scikit-learn, OpenCV, SHAP, SMOTE-ENN, Docker</div>
+      <ul>
+        <li>Built a BatteryML-style modular pipeline for WM-811K wafer E-maps and SECOM sensor logs.</li>
+        <li>Trained a Multi-Head CNN (ResMHCNN) and Spatial GNN to classify 9 wafer defect patterns.</li>
+        <li>Applied OOD confidence filtering to separate pseudo-defects from true packaging defects.</li>
+        <li>Resolved sensor missingness and class imbalance via VAE imputation, SHAP-RFE, and SMOTE-ENN.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">ResumeRanker: AI Resume Parser and Candidate Matching Platform (2026)</div>
+      <div class="tools-line"><strong>Tools:</strong> Python, spaCy, TF-IDF/BM25, FastAPI, Docker, PostgreSQL</div>
+      <ul>
+        <li>Built an NER pipeline (spaCy) to parse PDF/DOCX resumes and extract skills, education, and experience.</li>
+        <li>Designed a TF-IDF/BM25 algorithm for candidate-job relevance matching and scoring.</li>
+        <li>Auto-tagged candidates across AI/ML, data science, and full-stack profiles.</li>
+        <li>Deployed a Dockerized FastAPI backend, storing ranking scores and match logs in PostgreSQL.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">BioSearchAI: Biomedical RAG and Semantic Literature Search Platform (2026)</div>
+      <div class="tools-line"><strong>Tools:</strong> BioBERT, Sentence Transformers, FAISS, PubMed API</div>
+      <ul>
+        <li>Built a document pipeline for PubMed abstracts/PDFs, covering extraction, chunking, and cleaning.</li>
+        <li>Trained BioBERT for biomedical entity extraction across genes, diseases, drugs, and proteins.</li>
+        <li>Extended entity extraction further to cover organisms and clinical terminology.</li>
+        <li>Integrated Sentence Transformers with FAISS for semantic retrieval of sentence-level evidence.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Vehicle Detection using custom trained YOLOv8 Model (Present)</div>
+      <div class="tools-line"><strong>Tools:</strong> YOLOv8, TensorRT, Ultralytics, OpenCV, PyTorch, Google Colab</div>
+      <ul>
+        <li>Trained a YOLOv8n model (FP16) with a synthetic, auto-labeled YOLO-format dataset pipeline.</li>
+        <li>Benchmarked detection performance (mAP50, precision/recall) on a held-out test set.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Malaria Parasite Detection System (Present)</div>
+      <div class="tools-line"><strong>Tools:</strong> YOLOv11, SAHI, Docker, FastAPI, Streamlit</div>
+      <ul>
+        <li>Engineered a synthetic data pipeline using Poisson blending to generate labeled blood smear training images.</li>
+        <li>Fine-tuned YOLOv11 for real-time parasite localization using automated bounding box annotation.</li>
+        <li>Integrated SAHI for tiled high-resolution inference and deployed via Dockerized FastAPI and Streamlit.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">BriefAI: Real-Time Meeting Transcription and Multilingual Summarization Platform (2026)</div>
+      <div class="tools-line"><strong>Tools:</strong> FastAPI, WebSockets, faster-whisper, Ollama (Qwen3-1.7B, Llama 3.2-1B), SpeechBrain, React, JWT</div>
+      <ul>
+        <li>Built a full-stack app (React, FastAPI) integrating AI services for LLM fine-tuning and inference.</li>
+        <li>Built a live streaming pipeline using FastAPI WebSockets and a browser AudioWorklet capture.</li>
+        <li>Transcribed audio with faster-whisper and implemented speaker diarization using SpeechBrain ECAPA-TDNN embeddings.</li>
+        <li>Integrated Qwen3-1.7B and Llama 3.2-1B via Ollama for summarization and translation.</li>
+        <li>Secured the platform using JWT-based authentication and benchmarked LLM latency and throughput.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Differential Gene Expression Analysis of SCFA Treatment (2024)</div>
+      <div class="tools-line"><strong>Tools:</strong> GEOparse, scikit-learn, SciPy, Seaborn, Pandas</div>
+      <ul>
+        <li>Built a transcriptomic pipeline using GEOparse to retrieve and process public GEO expression datasets.</li>
+        <li>Applied parametric and non-parametric statistical testing with multiple-testing correction and Cohen's D.</li>
+        <li>Clustered expression patterns using PCA and K-Means, and visualized results via volcano plots.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Protein 3D Structure Visualization (2023)</div>
+      <div class="tools-line"><strong>Tools:</strong> Biopython, RCSB PDB API, py3Dmol, Django</div>
+      <ul>
+        <li>Built an interactive tool to fetch and parse PDB structures using Biopython and the RCSB PDB REST API.</li>
+        <li>Calculated secondary structure via DSSP and engineered geometric features like radial distance and angles.</li>
+        <li>Rendered interactive 3D molecular visualizations using py3Dmol with cartoon, stick, sphere, and surface styles.</li>
+      </ul>
+    </div>
+    </div>
+
+
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skill-row"><strong>LLMs &amp; VLMs</strong> Qwen3-1.7B, Llama 3.2-1B, BioBERT, Hugging Face Transformers, Ollama, NER, TF-IDF/BM25, Semantic Search, Text Classification, spaCy, Vector Search</div>
+    <div class="skill-row"><strong>Speech &amp; Retrieval</strong> Faster-whisper, SpeechBrain, Speaker Diarization, CTranslate2, FAISS, Sentence Transformers</div>
+    <div class="skill-row"><strong>Bioinformatics</strong> Biopython, Sequence Alignment, Genomic Data Analysis, NCBI/PubMed Databases</div>
+    <div class="skill-row"><strong>Web Front-Backend</strong> FastAPI, WebSockets, SQLAlchemy, PostgreSQL, PyJWT, React, TypeScript, Vite, axios</div>
+    <div class="skill-row"><strong>ML/MLOps &amp; AIOps</strong> PyTorch, scikit-learn, NumPy, pandas, MLflow, DeepSpeed, Docker, Kubernetes, Nginx, Git, GitHub Actions, CI/CD, Prometheus, Grafana</div>
+    <div class="skill-row"><strong>Lang &amp; Editors</strong> Python, R, JavaScript, TypeScript, Cursor, VS Code, Jupyter Notebook</div>
+  </section>
+
+  <section id="honors">
+    <h2>Honors &amp; Leadership</h2>
+    <ul class="honors-list">
+      <li><span class="yr">2025–</span><span><strong>Campus President</strong>, AICP, <span class="blue">Artificial Intelligence Community of Pakistan</span></span></li>
+      <li><span class="yr">2025</span><span><strong>Co-Lead</strong>, MSLA, <span class="blue">Microsoft Student Learning Ambassadors</span></span></li>
+      <li><span class="yr">2024</span><span><strong>Campus Ambassador</strong>, <span class="blue">Notion</span></span></li>
+      <li><span class="yr">2023</span><span><strong>Campus Ambassador</strong>, GDSC, <span class="blue">Google Developer Student Clubs</span></span></li>
+      <li><span class="yr">2021</span><span><strong>PEEF Scholarship</strong>, HSSC, <span class="blue">Punjab Educational Endowment Fund</span></span></li>
+      <li><span class="yr">2019</span><span><strong>PEEF Scholarship</strong>, SSC, <span class="blue">Punjab Educational Endowment Fund</span></span></li>
+    </ul>
+  </section>
+
+  <section id="languages">
+    <h2>Languages &amp; Coursework</h2>
+    <div class="skill-row"><strong>Languages</strong> English (Professional Working Proficiency), Urdu (Native)</div>
+    <div class="skill-row"><strong>Coursework</strong> Object-Oriented Programming, Data Structures &amp; Algorithms, DBMS</div>
+    <div class="skill-row"><strong>Coursework</strong> Machine Learning, Bioinformatics Computing, Systems Biology, Computational Genomics</div>
+  </section>
+
+  <section id="mentors">
+    <h2>Collaborators &amp; Mentors</h2>
+    <div class="edu">
+      <div class="edu-title">Dr. Adnan Ahmad Ansari</div>
+      <div class="edu-meta">Assistant Professor, Quaid-i-Azam University, Islamabad &middot; Advisor/Mentor</div>
+    </div>
+    <div class="edu">
+      <div class="edu-title">Dr. Junaid Rashid</div>
+      <div class="edu-meta">Assistant Professor, Sejong University, Seoul, South Korea &middot; AI/ML Project Advisor</div>
+    </div>
+    <div class="edu">
+      <div class="edu-title">Khawar Islam</div>
+      <div class="edu-meta">Scientist at Neubility AI, University of Melbourne, Melbourne, Australia &middot; Project Advisor</div>
+    </div>
+  </section>
+
+  <footer>
+    © Talha Saleem. Last updated: October 2026.
+  </footer>
+
+</div>
+</body>
+</html>
